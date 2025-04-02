@@ -1,209 +1,231 @@
-# Инструкция по установке и запуску бота для отслеживания цен
+📉 Telegram Bot for Tracking Changes in Product Prices
 
-Этот бот позволяет отслеживать цены на товары в интернет-магазинах и уведомлять вас об их изменении.
+Do you want to monitor changes in product prices effortlessly? This bot will help you not to miss price cuts or increases!
+With this bot, you can track the price dynamics for selected products and receive notifications when the price changes.
 
-## Содержание
-1. [Установка для Windows](#установка-для-windows)
-2. [Установка для Linux](#установка-для-linux)
-3. [Получение токена Telegram-бота](#получение-токена-telegram-бота)
-4. [Настройка и запуск бота](#настройка-и-запуск-бота)
-5. [Использование бота](#использование-бота)
+✅ What can he do?
 
-## Установка для Windows
+ • 🛒 Allows you to add links to products for tracking
+ • 📈 Automatically tracks price changes
+ • 📲 Notifies you of a decrease or increase in the price of an item
+ • 📂 Saves data about changes in the database for easy analysis
 
-### Шаг 1: Установка Python 3.9
-Python 3.9 - стабильная версия, которая отлично работает с нашим ботом.
+🔧 Functionality
 
-1. Скачайте установщик Python 3.9 с официального сайта: https://www.python.org/downloads/release/python-3913/
-   - Прокрутите страницу вниз и выберите "Windows installer (64-bit)"
+✅ Easy addition of links to products
+✅ Notifications of any price changes
+✅ Easy adjustment of the frequency of price checks
 
-2. Запустите скачанный файл и следуйте инструкциям установщика:
-   - ✅ Отметьте галочку "Add Python 3.9 to PATH" (это важно!)
-   - Нажмите "Install Now"
+📩 Are you ready to start tracking changes in product prices?
 
-3. Проверьте установку:
-   - Откройте Командную строку (нажмите Win+R, введите cmd и нажмите Enter)
-   - Введите команду: `python --version`
-   - Должна отобразиться версия Python, например "Python 3.9.13"
+Write to me on Telegram and I will help you set up this bot for your business! 🚀
 
-### Шаг 2: Установка необходимых библиотек
+# Instructions for installing and launching a price tracking bot
 
-1. Откройте Командную строку (нажмите Win+R, введите cmd и нажмите Enter)
+This bot allows you to track the prices of goods in online stores and notify you of their changes.
 
-2. Введите следующие команды поочередно (нажимайте Enter после каждой):
+## Content
+1. [Install for Windows](#install-for-windows)
+2. [Install for Linux](#install-for-linux)
+3. [Receiving a Telegram Bot token] (#receiving a telegram bot token)
+4. [Setting up and launching the bot] (#setting up and launching the bot)
+5. [Bot Usage] (#bot usage)
+
+## Installation for Windows
+
+### Step 1: Install Python 3.9
+Python 3.9 is a stable version that works great with our bot.
+
+1. Download the Python 3.9 installer from the official website: https://www.python.org/downloads/release/python-3913 /
+- Scroll down the page and select "Windows installer (64-bit)"
+
+2. Run the downloaded file and follow the instructions of the installer.:
+   - Check the box "Add Python 3.9 to PATH" (this is important!)
+- Click "Install Now"
+
+3. Check the installation:
+- Open the Command prompt (press Win+R, type cmd and press Enter)
+   - Enter the command: `python --version`
+   - The Python version should be displayed, for example "Python 3.9.13"
+
+### Step 2: Install the necessary libraries
+
+1. Open the Command Prompt (press Win+R, type cmd and press Enter)
+
+2. Enter the following commands one at a time (press Enter after each one):
    ```
    pip install python-telegram-bot==20.6
    pip install requests
    pip install beautifulsoup4
    ```
 
-### Шаг 3: Скачивание файла бота
+### Step 3: Download the bot file
 
-1. Создайте новую папку для бота (например, C:\price-tracker-bot)
+1. Create a new folder for the bot (for example, C:\price-tracker-bot )
 
-2. Сохраните код бота из предыдущих сообщений в файл `price_tracker_bot.py` в созданной папке.
+2. Save the bot code from previous messages to a file `price_tracker_bot.py ` in the created folder.
 
-## Установка для Linux
+## Installation for Linux
 
-### Шаг 1: Установка Python 3.9
+### Step 1: Install Python 3.9
 
-1. Откройте Терминал (обычно Ctrl+Alt+T)
+1. Open a Terminal (usually Ctrl+Alt+T)
 
-2. Обновите список пакетов:
+2. Update the package list:
    ```
    sudo apt update
    ```
 
-3. Установите необходимые инструменты для сборки Python:
+3. Install the necessary tools to build Python:
    ```
    sudo apt install software-properties-common build-essential
    ```
 
-4. Добавьте репозиторий с Python 3.9:
-   ```
+4. Add a repository with Python 3.9:
+``
    sudo add-apt-repository ppa:deadsnakes/ppa
    ```
 
-5. Обновите список пакетов снова:
+5. Update the package list again:
    ```
    sudo apt update
    ```
 
-6. Установите Python 3.9:
-   ```
+6. Install Python 3.9:
+``
    sudo apt install python3.9 python3.9-venv python3.9-dev python3-pip
    ```
 
-7. Проверьте установку:
-   ```
+7. Check the installation:
+``
    python3.9 --version
    ```
 
-### Шаг 2: Установка необходимых библиотек
+### Step 2: Install the necessary libraries
 
-Введите следующие команды поочередно:
-```
+Enter the following commands one at a time:
+``
 pip3 install python-telegram-bot==20.6
 pip3 install requests
 pip3 install beautifulsoup4
 ```
 
-### Шаг 3: Скачивание файла бота
+### Step 3: Download the bot file
 
-1. Создайте новую папку для бота:
+1. Create a new folder for the bot:
    ```
    mkdir ~/price-tracker-bot
    cd ~/price-tracker-bot
    ```
 
-2. Сохраните код бота из предыдущих сообщений в файл `price_tracker_bot.py` в созданной папке.
+2. Save the bot code from previous messages to a file `price_tracker_bot.py ` in the created folder.
 
-## Получение токена Telegram-бота
+## Getting a Telegram Bot token
 
-Для работы бота нужен специальный токен, который можно получить у @BotFather в Telegram:
+For the bot to work, you need a special token, which you can get from @BotFather on Telegram.:
 
-1. Откройте Telegram и найдите бота @BotFather (официальный бот Telegram для создания ботов)
+1. Open Telegram and find the bot @BotFather (Telegram's official bot for creating bots)
 
-2. Напишите боту команду: `/newbot`
+2. Write the command to the bot: `/newbot`
 
-3. BotFather попросит вас выбрать имя для бота - это имя будет отображаться пользователям. Например, "Мой трекер цен"
+3. BotFather will ask you to choose a name for the bot - this name will be displayed to users. For example, "My Price Tracker"
 
-4. Затем нужно ввести username для бота - он должен заканчиваться на "bot". Например, "my_price_tracker_bot"
+4. Then you need to enter the username for the bot - it should end with "bot". For example, "my_price_tracker_bot"
 
-5. Если имя свободно, BotFather выдаст вам токен - длинную строку символов вида:
+5. If the name is free, BotFather will give you a token - a long string of characters like:
    ```
    1234567890:ABCdefGhIJKlmNoPQRsTUVwxyZ
    ```
 
-6. Сохраните этот токен - он понадобится для настройки бота.
+6. Save this token - you will need it to set up the bot.
 
-## Настройка и запуск бота
+## Setting up and launching the bot
 
-### Шаг 1: Вставьте токен в код бота
+### Step 1: Insert the token into the bot code
 
-1. Откройте файл `price_tracker_bot.py` в любом текстовом редакторе (например, Блокнот в Windows или nano в Linux)
+1. Open the file `price_tracker_bot.py in any text editor (for example, Notepad on Windows or nano on Linux)
 
-2. Найдите строку:
-   ```python
+2. Find the line:
+``python
    application = Application.builder().token("YOUR_TELEGRAM_BOT_TOKEN").build()
    ```
 
-3. Замените `YOUR_TELEGRAM_BOT_TOKEN` на полученный от BotFather токен (вместе с кавычками), например:
+3. Replace `YOUR_TELEGRAM_BOT_TOKEN` with the token received from BotFather (along with quotes), for example:
    ```python
    application = Application.builder().token("1234567890:ABCdefGhIJKlmNoPQRsTUVwxyZ").build()
    ```
 
-4. Сохраните файл
+4. Save the file
 
-### Шаг 2: Запуск бота
+### Step 2: Launch the Bot
 
-#### В Windows:
-1. Откройте Командную строку (Win+R, введите cmd, нажмите Enter)
-2. Перейдите в папку с ботом (например, `cd C:\price-tracker-bot`)
-3. Запустите бота командой:
+#### On Windows:
+1. Open the Command Prompt (Win+R, type cmd, press Enter)
+2. Go to the folder with the bot (for example, `cd C:\price-tracker-bot `)
+3. Launch the bot with the command:
    ```
    python price_tracker_bot.py
    ```
 
-#### В Linux:
-1. Откройте Терминал (Ctrl+Alt+T)
-2. Перейдите в папку с ботом:
-   ```
+#### On Linux:
+1. Open A Terminal (Ctrl+Alt+T)
+2. Go to the bot folder:
+``
    cd ~/price-tracker-bot
    ```
-3. Запустите бота командой:
+3. Launch the bot with the command:
    ```
    python3.9 price_tracker_bot.py
    ```
 
-### Шаг 3: Проверка работы бота
+### Step 3: Checking the bot's operation
 
-1. Откройте Telegram на телефоне или компьютере
-2. Найдите бота по имени, которое вы задали при создании
-3. Напишите боту команду `/start`
-4. Бот должен ответить приветственным сообщением
+1. Open Telegram on your phone or computer
+2. Find the bot by the name you specified when creating it.
+3. Write the command `/start` to the bot
+4. The bot should reply with a welcome message.
 
-## Использование бота
+## Using a bot
 
-После запуска бота, вы можете использовать следующие команды:
+After launching the bot, you can use the following commands:
 
-- `/start` - Показать приветствие и список команд
-- `/add` - Добавить ссылку на товар для отслеживания
-- `/list` - Показать список всех отслеживаемых товаров
-- `/remove` - Удалить товар из отслеживания
+- `/start' - Show the greeting and the list of commands
+- `/add` - Add a link to the product for tracking
+- `/list` - Show a list of all tracked items
+- `/remove` - To remove an item from tracking
 
-### Как добавить товар для отслеживания:
+### How to add an item for tracking:
 
-1. Отправьте команду `/add`
-2. Бот попросит отправить ссылку на товар
-3. Скопируйте ссылку на товар с сайта интернет-магазина и отправьте боту
-4. Бот подтвердит добавление товара и покажет текущую цену
+1. Send the `/add` command
+2. The bot will ask you to send a link to the product
+3. Copy the product link from the online store's website and send it to the bot
+4. The bot will confirm the addition of the product and show the current price.
 
-### Как это работает:
+### How it works:
 
-- Бот будет проверять цены всех добавленных товаров каждый день в 9:00 утра
-- Если цена изменится, бот отправит вам уведомление
-- В уведомлении будет показана старая цена, новая цена и процент изменения
+- The bot will check the prices of all added items every day at 9:00 a.m.
+- If the price changes, the bot will send you a notification.
+- The notification will show the old price, the new price and the percentage of change.
 
-### Как запускать бота постоянно (чтобы он работал 24/7):
+### How to run a bot all the time (so that it works 24/7):
 
 #### Windows:
-1. Создайте файл `start_bot.bat` в той же папке со следующим содержимым:
-   ```
+1. Create the `start_bot' file.bat` in the same folder with the following contents:
+``
    @echo off
-   echo Запуск бота отслеживания цен...
-   python price_tracker_bot.py
-   pause
+echo Launching a price tracking bot...
+python price_tracker_bot.py
+pause
    ```
-2. Запускайте этот файл вместо команды в командной строке
+2. Run this file instead of the command in the command prompt
 
 #### Linux:
-Для автоматического запуска бота при загрузке системы выполните:
-1. Создайте сервисный файл:
+To automatically launch the bot when the system boots, run:
+1. Create a service file:
    ```
    sudo nano /etc/systemd/system/price-tracker-bot.service
    ```
-2. Добавьте в него следующее содержимое (замените путь на ваш):
+2. Add the following contents to it (replace the path with yours):
    ```
    [Unit]
    Description=Price Tracker Telegram Bot
@@ -218,30 +240,30 @@ pip3 install beautifulsoup4
    [Install]
    WantedBy=multi-user.target
    ```
-3. Замените YOUR_USERNAME на имя вашего пользователя
-4. Сохраните файл (Ctrl+O, затем Enter) и выйдите (Ctrl+X)
-5. Выполните:
+3. Replace YOUR_USERNAME with your user's name
+4. Save the file (Ctrl+O, then Enter) and exit (Ctrl+X)
+5. Perform:
    ```
    sudo systemctl enable price-tracker-bot.service
    sudo systemctl start price-tracker-bot.service
    ```
 
-## Решение проблем
+## Problem solving
 
-### Если бот не запускается:
+### If the bot does not start:
 
-1. **Проверьте, правильно ли установлен Python**
-   - В Windows: введите `python --version` в командной строке
-   - В Linux: введите `python3.9 --version` в терминале
+1. **Check if Python is installed correctly.**
+   - On Windows: type `python --version` at the command prompt
+   - On Linux: type `python3.9 --version` in the terminal
 
-2. **Проверьте, правильно ли установлены библиотеки**
-   - В Windows: `pip list | findstr telegram`
-   - В Linux: `pip3 list | grep telegram`
+2. **Check if the libraries are installed correctly.**
+   - On Windows: `pip list | findstr telegram`
+- On Linux: `pip3 list | grep telegram`
 
-3. **Проверьте правильность токена**
-   - Убедитесь, что токен вставлен правильно, без лишних пробелов
+3. **Check the correctness of the token**
+- Make sure that the token is inserted correctly, without unnecessary spaces
 
-4. **Проверьте доступ в интернет**
-   - Бот требует постоянного подключения к интернету
+4. **Check your internet access**
+   - The bot requires a constant internet connection
 
-Если бот не может определить цену на каком-то сайте, возможно, структура сайта не поддерживается. В этом случае попробуйте другой магазин.
+If the bot cannot determine the price on some site, it is possible that the site structure is not supported. In this case, try another store.
